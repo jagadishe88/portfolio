@@ -1,7 +1,11 @@
-.navbar{
-    background: none;
+.background-image-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
-
-.navbar-right{
-    background: none;
+.hero-full-container {
+    height: 100vh;
+}
+.bmg_image{
+    background-image: url("../images/black1.jpg");
 }
