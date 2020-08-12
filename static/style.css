@@ -3,26 +3,28 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+
 .hero-full-container {
     height: 100vh;
 }
-.bmg_image{
+
+.bmg_image {
     background-image: url("../images/black1.jpg");
 }
 
-.experince{
+.experince {
     color: white;
 }
 
-#about{
+#about {
     color: white;
 }
 
-.form-group{
+.form-group {
     color: white;
 }
 
-.heading{
+.heading {
     color: white;
 }
 
