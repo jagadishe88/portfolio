@@ -21,3 +21,13 @@
 .form-group{
     color: white;
 }
+
+.heading{
+    color: white;
+}
+
+.image-container {
+    padding: 30px;
+    display: inline-block;
+
+}
