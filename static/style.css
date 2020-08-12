@@ -1,7 +1,8 @@
 .background-image-container {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-full-container {
@@ -43,5 +44,22 @@
 
 .navbar-custom{
     background-color: orange;
+}
+
+.form-new{
+    padding-top: 20px;
+}
+
+.heading-p{
+    padding-top: 20px;
+    color: white;
+}
+
+.experince{
+    padding-top: 20px;
+}
+
+.img-responsive{
+    padding-top: 20px;
 }
 
