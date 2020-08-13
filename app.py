@@ -33,16 +33,10 @@ def write_to_csv(data):
         csv_wiriter.writerow([email, subject, message])
 
 
-@app.route('/submit_form', methods=['POST', 'GET'])
-def submit_form():
+@app.route('/thankyou', methods=['POST'])
+def thankyou():
+    return redirect('thankyou.html')
 
-        if request.method == 'POST':
-            form = request.form
-            emailto = form['email']
-            subject = form['subject']
-            msg = Message(subject, sender=[emailto], recipients="me@jenkarla.com")
-            Mail.send(msg)
-        return render_template('/contact.html')
 
 
 

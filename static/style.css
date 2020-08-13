@@ -10,7 +10,7 @@
 }
 
 .bmg_image {
-    background-image: url("../images/black1.jpg");
+    background-image: url("../static/images/black1.jpg");
 }
 
 .experince {
@@ -61,5 +61,9 @@
 
 .img-responsive{
     padding-top: 20px;
+}
+
+.thank-you{
+    color: orange;
 }
 
