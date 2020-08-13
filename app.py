@@ -19,6 +19,7 @@ mail_settings = {
 app.config.update(mail_settings)
 mail = Mail(app)
 
+
 @app.route('/')
 def my_home():
     return render_template('home.html')
@@ -29,19 +30,15 @@ def html_page(page_name):
     return render_template(page_name)
 
 
-@app.route('/thankyou', methods=['POST', 'GET'])
+@app.route('/thankyou', methods=['GET', 'POST'])
 def thankyou():
     if request.method == 'POST':
         form = request.form
         emailto = form['email']
         subject = form['subject']
-        message = form['message']
-
-
-
-        msg = Message(subject, recipients = "me@jenkarla.com" , sender= [emailto] )
+        msg = Message(subject, sender=emailto, recipients=['me@jenkarla.com'])
         mail.send(msg)
-        return redirect('home.html')
+    return redirect('home.html')
 
 
 if __name__ == '__main__':
