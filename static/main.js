@@ -1,2 +1,3 @@
-console.log("This is the new script")
-
+function myFunc(){
+    alert("Thank You, I will get back to you soon");
+}
