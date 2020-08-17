@@ -1,8 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect
-import csv
 from flask_mail import Mail, Message
-import os
-from flask_bootstrap import Bootstrap
+
 
 app = Flask(__name__)
 
@@ -30,15 +28,16 @@ def html_page(page_name):
     return render_template(page_name)
 
 
-@app.route('/thankyou', methods=['GET', 'POST'])
+@app.route('/home', methods=['POST', 'GET'])
 def thankyou():
     if request.method == 'POST':
         form = request.form
-        emailto = form['email']
+        emailfrom = form['email']
         subject = form['subject']
-        msg = Message(subject, sender=emailto, recipients=['me@jenkarla.com'])
+        message = form['message']
+        msg = Message(subject, sender=emailfrom, recipients=['me@jenkarla.com'])
         mail.send(msg)
-    return redirect('home.html')
+    return render_template('home.html')
 
 
 if __name__ == '__main__':
