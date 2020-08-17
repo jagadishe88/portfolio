@@ -35,7 +35,7 @@ def thankyou():
         emailfrom = form['email']
         subject = form['subject']
         message = form['message']
-        msg = Message(message, subject, sender=emailfrom) #recipients=['me@jenkarla.com'])
+        msg = Message(subject, sender=emailfrom, recipients=['me@jenkarla.com'])
         mail.send(msg)
     return render_template('home.html')
 
