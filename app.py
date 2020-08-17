@@ -1,7 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_mail import Mail, Message
 
-
 app = Flask(__name__)
 
 # set configuration and instantiate mail
@@ -35,7 +34,8 @@ def thankyou():
         emailfrom = form['email']
         subject = form['subject']
         message = form['message']
-        msg = Message(subject, sender=emailfrom, recipients=['me@jenkarla.com'])
+        msg = Message(
+            subject, sender=emailfrom, recipients=['me@jenkarla.com'])
         mail.send(msg)
     return render_template('home.html')
 
