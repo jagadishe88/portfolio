@@ -8,6 +8,7 @@ instance/*
 .webassets-cache
 .idea/
 .__pychache__/
+.env/
 # Created by https://www.toptal.com/developers/gitignore/api/macos,python,pycharm,flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,python,pycharm,flask
 
