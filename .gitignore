@@ -10,8 +10,8 @@ instance/*
 .__pychache__/
 .env/
 .gitignore
-python=python3.8.5
-/templates/contact.html
+.python=python3.8.5
+./templates/contact.html
 # Created by https://www.toptal.com/developers/gitignore/api/macos,python,pycharm,flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,python,pycharm,flask
 
