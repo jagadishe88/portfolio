@@ -654,3 +654,4 @@ fabric.properties
 # pytype static type analyzer
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,pycharm,flask
+/python=python3.8.5/
