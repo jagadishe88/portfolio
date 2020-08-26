@@ -27,16 +27,17 @@ def html_page(page_name):
     return render_template(page_name)
 
 
+app.secret_key = 'development key'
+
+
 @app.route('/home', methods=['POST', 'GET'])
 def thankyou():
-    if request.method == 'POST':
-        form = request.form
-        emailfrom = form['email']
-        subject = form['subject']
-        message = form['message']
-        msg = Message(
-            subject, sender=emailfrom, recipients=['me@jenkarla.com'])
-        mail.send(msg)
+    form = request.form
+    emailfrom = form['email']
+    subject = form['subject']
+    message = form['message']
+    msg = Message(subject, sender=emailfrom, recipients=['me@jenkarla.com'])
+    mail.send(msg)
     return render_template('home.html')
 
 
